@@ -4,8 +4,6 @@
 
 ## About
 
----
-
 Used to promote content on the top of the site.
 
 ## Getting Started
