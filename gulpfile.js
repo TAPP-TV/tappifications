@@ -9,16 +9,16 @@ var gulp = require('gulp'),
 
 var paths = {
     less: './src/less/**/*.less',
-    html: './src/index.html'
+    html: './src/*.html'
 };
 
 var port = 8080;
 
 gulp.task('open', function() {
-	var options = {
-		url: 'http://localhost:' + port
-	};
-    gulp.src(paths.html)
+    var options = {
+        url: 'http://localhost:' + port
+    };
+    gulp.src('./src/index.html')
         .pipe(open('', options));
 });
 
@@ -30,6 +30,10 @@ gulp.task('webserver', function() {
     });
 });
 
+gulp.task('html', function() {
+    return gulp.src(paths.html)
+        .pipe(connect.reload());
+});
 
 gulp.task('less', function() {
     return gulp.src(paths.less)
@@ -40,7 +44,7 @@ gulp.task('less', function() {
 
 gulp.task('watch', function() {
     gulp.watch(paths.less, ['less']);
-    gulp.watch(paths.html, ['less']);
+    gulp.watch(paths.html, ['html']);
 });
 
 gulp.task('default', ['less', 'webserver', 'watch', 'open']);
