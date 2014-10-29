@@ -1,8 +1,20 @@
 # Tappifications
 
-> Because we need another jquery notification library...
+> Because we need another jquery notifications library...
+
+## About
 
 Used to promote content on the top of the site.
+
+## Getting Started
+
+Install all dependencies then run gulp to open the `index.html` example in your browser.
+
+```
+npm install
+bower install
+gulp
+```
 
 ## Look and Feel
 
