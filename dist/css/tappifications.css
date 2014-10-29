@@ -1,0 +1,24 @@
+.tappification {
+  background: #ffffff;
+}
+.tappification-info {
+  background-color: #167afb;
+  color: #ffffff;
+}
+.tappification-info .tappification-link {
+  color: #e6e6e6;
+}
+.tappification-warning {
+  background-color: #fdc12d;
+  color: #000000;
+}
+.tappification-warning .tappification-link {
+  color: #000000;
+}
+.tappification-danger {
+  background-color: #fdc12d;
+  color: #ffffff;
+}
+.tappification-danger .tappification-link {
+  color: #e6e6e6;
+}

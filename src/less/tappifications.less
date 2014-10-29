@@ -1,0 +1,29 @@
+@import "_variables.less";
+
+// Tappifications
+.tappification {
+	background: @tappification-default;
+}
+
+// Different flavors
+.tappification-info {
+	.tappification-variant(@tappification-info, @tappification-text-light, @tappification-icon-info);
+}
+
+.tappification-warning {
+	.tappification-variant(@tappification-warning, @tappification-text-dark, @tappification-icon-dark);
+}
+
+.tappification-danger {
+	.tappification-variant(@tappification-warning, @tappification-text-light, @tappification-icon-light);
+}
+
+// mixin to decorate the different flavors of a notification
+.tappification-variant(@background; @text-color; @icon-color) {
+  background-color: @background;
+  color: @text-color;
+
+  .tappification-link {
+    color: darken(@text-color, 10%);
+  }
+}
