@@ -34,13 +34,13 @@ gulp.task('webserver', function() {
 gulp.task('less', function() {
     return gulp.src(paths.less)
         .pipe(less())
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./src/css'))
         .pipe(connect.reload());
 });
 
 gulp.task('watch', function() {
-    gulp.watch(paths.less, ['compile-less']);
+    gulp.watch(paths.less, ['less']);
+    gulp.watch(paths.html, ['less']);
 });
 
 gulp.task('default', ['less', 'webserver', 'watch', 'open']);
-// gulp.task('default', ['less']);
