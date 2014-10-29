@@ -3,6 +3,21 @@
 // Tappifications
 .tappification {
 	background: @tappification-default;
+
+	.container {
+		max-width: @tappification-max-width;
+		margin-left: auto;
+		margin-right: auto;
+		border-left: 1px solid black;
+		border-right: 1px solid black;
+	}
+
+	// override default button styles
+	button {
+		background: none;
+		border: none;
+		outline: none;
+	}
 }
 
 // Different flavors
