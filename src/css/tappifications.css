@@ -1,6 +1,11 @@
 .tappification {
   background: #ffffff;
 }
+.tappification button {
+  background: none;
+  border: none;
+  outline: none;
+}
 .tappification .container {
   max-width: 933px;
   margin-left: auto;
@@ -8,10 +13,12 @@
   border-left: 1px solid black;
   border-right: 1px solid black;
 }
-.tappification button {
-  background: none;
-  border: none;
-  outline: none;
+.tappification .close {
+  float: right;
+}
+.tappification p,
+.tappification .close {
+  display: inline-block;
 }
 .tappification-info {
   background-color: #167afb;

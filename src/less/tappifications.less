@@ -2,6 +2,15 @@
 
 // Tappifications
 .tappification {
+	
+	// override default button styles
+	button {
+		background: none;
+		border: none;
+		outline: none;
+	}
+
+	// start defining styles
 	background: @tappification-default;
 
 	.container {
@@ -12,12 +21,14 @@
 		border-right: 1px solid black;
 	}
 
-	// override default button styles
-	button {
-		background: none;
-		border: none;
-		outline: none;
+	.close {
+		float: right;
 	}
+
+	p, .close {
+		display: inline-block;
+	}
+
 }
 
 // Different flavors
