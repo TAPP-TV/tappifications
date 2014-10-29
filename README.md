@@ -2,6 +2,8 @@
 
 > Because we need another jquery notification library...
 
+---
+
 Used to promote content on the top of the site.
 
 ## Look and Feel
