@@ -14,58 +14,12 @@
 
 <body>
 
-    <div class="tappification tappification-warning tappification-dismissible" role="alert">
-        <div class="container">
-            <div class="tappification-icon">
-                <i class="fa fa-exclamation-circle"></i>
-            </div>
-            <div class="tappification-message">Your Membership is going to expire in 5 days!</div>
-            <button type="button" class="tappification-close" data-dismiss="alert">
-                <span aria-hidden="true"><i class="fa fa-times-circle-o"></i>
-                </span>
-            </button>
-        </div>
-    </div>
-
-    <div class="tappification tappification-danger tappification-dismissible" role="alert">
-        <div class="container">
-            <div class="tappification-icon">
-                <i class="fa fa-meh-o"></i>
-            </div>
-            <div class="tappification-message">Your Membership is going to expire in 5 days!</div>
-            <div class="tappification-link">
-                <a class="primary" href="#">Link to membership page</a>
-            </div>
-            <button type="button" class="tappification-close" data-dismiss="alert">
-                <span aria-hidden="true"><i class="fa fa-times-circle-o"></i>
-                </span>
-            </button>
-        </div>
-    </div>
-
-
-    <div class="tappification tappification-info tappification-dismissible" role="alert">
-        <div class="container">
-            <div class="tappification-icon">
-                <i class="fa fa-comments"></i>
-            </div>
-            <div class="tappification-message">Your Membership is going to expire in 5 days!</div>
-            <div class="tappification-link">
-                <a class="primary" href="#">Join video chat now!</a>
-            </div>
-            <button type="button" class="tappification-close" data-dismiss="alert">
-                <span aria-hidden="true"><i class="fa fa-times-circle-o"></i>
-                </span>
-            </button>
-        </div>
-    </div>
-
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="js/tappifications.js"></script>
 
     <script>
     $.tappification({
-        type: 'error',
+        type: 'warning',
         message: 'Your Membership is going to expire in 5 days!',
         callToActionText: 'Join video chat now!',
         callToActionUrl: '/subscribe/'

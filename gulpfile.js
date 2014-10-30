@@ -9,7 +9,8 @@ var gulp = require('gulp'),
 
 var paths = {
     less: './src/less/**/*.less',
-    html: './src/*.html'
+    html: './src/*.html',
+    js: './src/js/*.js',
 };
 
 var port = 8080;
@@ -35,6 +36,11 @@ gulp.task('html', function() {
         .pipe(connect.reload());
 });
 
+gulp.task('js', function() {
+    return gulp.src(paths.js)
+        .pipe(connect.reload());
+});
+
 gulp.task('less', function() {
     return gulp.src(paths.less)
         .pipe(less())
@@ -45,6 +51,7 @@ gulp.task('less', function() {
 gulp.task('watch', function() {
     gulp.watch(paths.less, ['less']);
     gulp.watch(paths.html, ['html']);
+    gulp.watch(paths.html, ['js']);
 });
 
 gulp.task('default', ['less', 'webserver', 'watch', 'open']);

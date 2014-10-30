@@ -1,6 +1,12 @@
 .tappification {
+  position: fixed;
   min-height: 40px;
   background: #ffffff;
+}
+.tappification[data-position="bottom"] {
+  right: 0;
+  left: 0;
+  bottom: -50px;
 }
 .tappification button {
   background: none;
@@ -106,6 +112,9 @@
 .tappification-warning {
   background-color: #fdc12d;
   color: #000000;
+}
+.tappification-warning .tappification-link .primary {
+  color: black;
 }
 .tappification-warning .tappification-icon {
   color: #000000;

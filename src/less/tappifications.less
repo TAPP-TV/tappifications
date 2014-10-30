@@ -3,8 +3,16 @@
 // Tappifications
 .tappification {
 
+	position: fixed;
 	min-height: 40px;
 	
+	// Position of Notifications
+	&[data-position="bottom"] {
+		right: 0;
+		left: 0;
+		bottom: -50px;
+	}
+
 	// override default button styles
 	button {
 		background: none;
@@ -113,6 +121,11 @@
 }
 
 .tappification-warning {
+	.tappification-link {
+		.primary {
+			color: black;
+		}
+	}
 	.tappification-variant(@tappification-warning, @tappification-text-dark, @tappification-icon-dark);
 }
 
