@@ -8,21 +8,95 @@
     <link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
 
-    <!-- app styles -->
+    <!-- tappifications styles -->
     <link rel="stylesheet" type="text/css" href="css/tappifications.css">
+
+    <!-- page specifc styles, dont use these in your project because they only apply to this page -->
+    <style>
+    section {
+        width: 600px;
+        margin: 0 auto;
+        /*text-align: center;*/
+    }
+    button {
+        padding: 10px 40px 10px 40px;
+    }
+    pre {
+        background: #eee;
+        padding-left: 20px;
+    }
+    </style>
 </head>
 
 <body>
+
+    <section>
+        <h1>Tappifications</h1>
+        <button class="tappification-info">Info</button>
+        <button class="tappification-warning">Warning</button>
+        <button class="tappification-danger">Danger</button>
+        <br><br>
+        <hr>
+        <h2>Usage:</h2>
+        <pre>
+            <code>
+$.tappification({
+    type: 'info',
+    message: 'Your message goes here!',
+    callToActionText: 'Click on me',
+    callToActionUrl: 'http://www.tapptv.com/'
+});</code>
+        </pre>
+        <br>
+        <hr>
+        <h3>Requires</h3>
+        <ul>
+            <li>jQuery</li>
+            <li>font-awesome</li>
+        </ul>
+        <br>
+        <hr>
+        <h4>Including in your project</h4>
+        <h5>CSS</h5>
+        <pre>
+            <code>
+css/tappifications.css</code>
+        </pre>
+        <h5>JS</h5>
+        <pre>
+            <code>
+js/tappifications.js</code>
+        </pre>
+    </section>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="js/tappifications.js"></script>
 
     <script>
-    $.tappification({
-        type: 'warning',
-        message: 'Your Membership is going to expire in 5 days!',
-        callToActionText: 'Join video chat now!',
-        callToActionUrl: '/subscribe/'
+    $('.tappification-info').click(function() {
+        $.tappification({
+            type: 'info',
+            message: 'Your Membership is going to expire in 5 days!',
+            callToActionText: 'Join video chat now!',
+            callToActionUrl: '#'
+        });
+    });
+    $('.tappification-warning').click(function() {
+        $.tappification({
+            type: 'warning',
+            message: 'Your Membership is going to expire in 5 days!',
+            callToActionText: 'Join video chat now!',
+            callToActionUrl: '#'
+        });
+    });
+    $('.tappification-danger').click(function() {
+        $.tappification({
+            type: 'danger',
+            message: 'Your Membership is going to expire in 5 days!',
+            callToActionText: 'Join video chat now!',
+            callToActionUrl: '#'
+        });
+
     });
     </script>
 
