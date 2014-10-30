@@ -2,6 +2,8 @@
 
 // Tappifications
 .tappification {
+
+	min-height: 40px;
 	
 	// override default button styles
 	button {
@@ -19,16 +21,92 @@
 		margin-right: auto;
 		border-left: 1px solid black;
 		border-right: 1px solid black;
+		position: relative;
+		padding: 10px 20px 15px 20px;
+		font-size: 14px;
+		font-weight: 100;
+
+		div {
+			display: inline-block;
+		}
 	}
 
-	.close {
-		float: right;
+	.tappification-icon {
+		font-size: 27px;
+		position: absolute;		
+		top: 3px;
 	}
 
-	p, .close {
-		display: inline-block;
+	.tappification-message {
+		padding-left: 40px;
 	}
 
+
+	.tappification-link {
+		a {
+			color: white;
+			text-decoration: underline;
+			&:hover {
+				opacity: @hover-dim;
+			}
+		}
+	}
+
+	.tappification-link, 
+	.tappification-message,
+	.tappification-close {
+
+		.transition(opacity 0.2s ease-in);
+
+		a {
+			.transition(opacity 0.2s ease-in);
+		}
+	}
+
+	.tappification-cta {
+
+		button.primary {
+			text-transform: uppercase;
+			background: @tappification-info-button;
+			padding: 5px 15px 5px 15px;
+			font-size: 12px;
+			font-weight: 500;
+			border: solid 1px darken(@tappification-info-button, 6%);
+			.border-radius(4px);
+			.transition(opacity 0.3s ease-in);
+
+			&:hover {
+				opacity: @hover-dim;
+			}
+		}
+	}
+
+	.tappification-close {
+		position: absolute;
+		right: 15px;
+		top: 5px;
+		font-size: 20px;
+		&:hover {
+			opacity: @hover-dim;
+		}
+	}
+
+	.tappification-link,
+	.tappification-cta {
+		padding-left: 20px;
+	}
+	
+	.inverse {
+		color: black;
+	}
+
+	@media screen and (max-width: @viewport-bootstrap-portrain-min) {
+		.tappification-link {
+			padding: 7px 0 0 40px;
+		}
+		.tappification-icon {
+		}
+	}
 }
 
 // Different flavors
@@ -49,7 +127,29 @@
   background-color: @background;
   color: @text-color;
 
+  .tappification-icon {
+  	color: @icon-color;
+  }
+
   .tappification-link {
     color: darken(@text-color, 10%);
   }
+}
+
+// Mixins
+
+
+.border-radius (@radius) {  
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.transition (...) {
+  // allows for multiple comma separated values
+  @props: ~`"@{arguments}".replace(/[\[\]]/g, '')`;
+  -o-transition: @props;
+  -moz-transition: @props;
+  -webkit-transition: @props;
+  transition: @props;
 }

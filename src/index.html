@@ -16,20 +16,49 @@
 
     <div class="tappification tappification-danger tappification-dismissible" role="alert">
         <div class="container">
-            <p>
-                <i class="fa fa-exclamation-circle fa-inverse"></i>
-            </p>
-            <p>Your Membership is going to expire in 5 days!</p>
-            <p>
-                <button type="button" class="btn btn-danger">Take this action</button>
-                <button type="button" class="btn btn-default">Or do this</button>
-            </p>
-            <button type="button" class="close" data-dismiss="alert">
+            <div class="tappification-icon">
+                <i class="fa fa-meh-o"></i>
+            </div>
+            <div class="tappification-message">Your Membership is going to expire in 5 days!</div>
+            <div class="tappification-link">
+                <a href="#">Link to membership page</a>
+            </div>
+            <button type="button" class="tappification-close" data-dismiss="alert">
                 <span aria-hidden="true"><i class="fa fa-times-circle-o"></i>
                 </span>
             </button>
         </div>
     </div>
+
+    <div class="tappification tappification-warning tappification-dismissible" role="alert">
+        <div class="container">
+            <div class="tappification-icon">
+                <i class="fa fa-exclamation-circle"></i>
+            </div>
+            <div class="tappification-message">Your Membership is going to expire in 5 days!</div>
+            <button type="button" class="tappification-close" data-dismiss="alert">
+                <span aria-hidden="true"><i class="fa fa-times-circle-o"></i>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <div class="tappification tappification-info tappification-dismissible" role="alert">
+        <div class="container">
+            <div class="tappification-icon">
+                <i class="fa fa-comments"></i>
+            </div>
+            <div class="tappification-message">Your Membership is going to expire in 5 days!</div>
+            <div class="tappification-cta">
+                <button type="button" class="primary">Join video chat now!</button>
+            </div>
+            <button type="button" class="tappification-close" data-dismiss="alert">
+                <span aria-hidden="true"><i class="fa fa-times-circle-o"></i>
+                </span>
+            </button>
+        </div>
+    </div>
+
 
 </body>
 
