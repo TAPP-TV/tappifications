@@ -63,16 +63,9 @@
 		}
 	}
 
-	.tappification-cta {
+	.tappification-link {
 
-		button.primary {
-			text-transform: uppercase;
-			background: @tappification-info-button;
-			padding: 5px 15px 5px 15px;
-			font-size: 12px;
-			font-weight: 500;
-			border: solid 1px darken(@tappification-info-button, 6%);
-			.border-radius(4px);
+		.primary {
 			.transition(opacity 0.3s ease-in);
 
 			&:hover {
@@ -91,11 +84,10 @@
 		}
 	}
 
-	.tappification-link,
-	.tappification-cta {
+	.tappification-link {
 		padding-left: 20px;
 	}
-	
+
 	.inverse {
 		color: black;
 	}
@@ -111,6 +103,12 @@
 
 // Different flavors
 .tappification-info {
+	.tappification-link {
+		.primary {
+			.tappification-btn-c2a();
+			.border-radius(4px);
+		}
+	}
 	.tappification-variant(@tappification-info, @tappification-text-light, @tappification-icon-info);
 }
 
@@ -136,9 +134,17 @@
   }
 }
 
+.tappification-btn-c2a {
+	text-decoration: none;
+	text-transform: uppercase;
+	background: @tappification-info-button;
+	border: solid 1px darken(@tappification-info-button, 6%);
+	padding: 5px 15px 5px 15px;
+	font-size: 12px;
+	font-weight: 500;
+}
+
 // Mixins
-
-
 .border-radius (@radius) {  
   -moz-border-radius: @radius;
   -webkit-border-radius: @radius;

@@ -52,22 +52,13 @@
   -webkit-transition: opacity, 0.2s, ease-in;
   transition: opacity, 0.2s, ease-in;
 }
-.tappification .tappification-cta button.primary {
-  text-transform: uppercase;
-  background: #0b3e85;
-  padding: 5px 15px 5px 15px;
-  font-size: 12px;
-  font-weight: 500;
-  border: solid 1px #093169;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+.tappification .tappification-link .primary {
   -o-transition: opacity, 0.3s, ease-in;
   -moz-transition: opacity, 0.3s, ease-in;
   -webkit-transition: opacity, 0.3s, ease-in;
   transition: opacity, 0.3s, ease-in;
 }
-.tappification .tappification-cta button.primary:hover {
+.tappification .tappification-link .primary:hover {
   opacity: 0.6;
 }
 .tappification .tappification-close {
@@ -79,8 +70,7 @@
 .tappification .tappification-close:hover {
   opacity: 0.6;
 }
-.tappification .tappification-link,
-.tappification .tappification-cta {
+.tappification .tappification-link {
   padding-left: 20px;
 }
 .tappification .inverse {
@@ -94,6 +84,18 @@
 .tappification-info {
   background-color: #167afb;
   color: #ffffff;
+}
+.tappification-info .tappification-link .primary {
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #0b3e85;
+  border: solid 1px #093169;
+  padding: 5px 15px 5px 15px;
+  font-size: 12px;
+  font-weight: 500;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
 }
 .tappification-info .tappification-icon {
   color: #7fbcfc;
@@ -120,4 +122,13 @@
 }
 .tappification-danger .tappification-link {
   color: #e6e6e6;
+}
+.tappification-btn-c2a {
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #0b3e85;
+  border: solid 1px #093169;
+  padding: 5px 15px 5px 15px;
+  font-size: 12px;
+  font-weight: 500;
 }
