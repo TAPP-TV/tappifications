@@ -1,6 +1,11 @@
+* {
+  box-sizing: border-box;
+}
 .tappification {
+  line-height: 1.42857143;
   position: fixed;
   min-height: 40px;
+  z-index: 9007199254740992;
   background: #ffffff;
 }
 .tappification[data-position="bottom"] {
@@ -12,6 +17,8 @@
   background: none;
   border: none;
   outline: none;
+  margin: 0;
+  padding: 0;
 }
 .tappification .container {
   max-width: 933px;
@@ -20,7 +27,7 @@
   border-left: 1px solid black;
   border-right: 1px solid black;
   position: relative;
-  padding: 10px 20px 15px 20px;
+  padding: 0 20px 15px 20px;
   font-size: 14px;
   font-weight: 100;
 }
@@ -34,57 +41,50 @@
 }
 .tappification .tappification-message {
   padding-left: 40px;
+  padding-top: 10px;
+}
+.tappification .tappification-link {
+  padding-left: 40px;
+  padding-top: 10px;
 }
 .tappification .tappification-link a {
+  display: block;
   color: white;
   text-decoration: underline;
-}
-.tappification .tappification-link a:hover {
-  opacity: 0.6;
-}
-.tappification .tappification-link,
-.tappification .tappification-message,
-.tappification .tappification-close {
-  -o-transition: opacity, 0.2s, ease-in;
-  -moz-transition: opacity, 0.2s, ease-in;
-  -webkit-transition: opacity, 0.2s, ease-in;
-  transition: opacity, 0.2s, ease-in;
-}
-.tappification .tappification-link a,
-.tappification .tappification-message a,
-.tappification .tappification-close a {
-  -o-transition: opacity, 0.2s, ease-in;
-  -moz-transition: opacity, 0.2s, ease-in;
-  -webkit-transition: opacity, 0.2s, ease-in;
-  transition: opacity, 0.2s, ease-in;
-}
-.tappification .tappification-link .primary {
   -o-transition: opacity, 0.3s, ease-in;
   -moz-transition: opacity, 0.3s, ease-in;
   -webkit-transition: opacity, 0.3s, ease-in;
   transition: opacity, 0.3s, ease-in;
 }
-.tappification .tappification-link .primary:hover {
+.tappification .tappification-link a:hover {
   opacity: 0.6;
 }
 .tappification .tappification-close {
   position: absolute;
   right: 15px;
-  top: 0;
+  top: 5px;
   font-size: 20px;
+  -o-transition: opacity, 0.2s, ease-in;
+  -moz-transition: opacity, 0.2s, ease-in;
+  -webkit-transition: opacity, 0.2s, ease-in;
+  transition: opacity, 0.2s, ease-in;
 }
 .tappification .tappification-close:hover {
   opacity: 0.6;
 }
-.tappification .tappification-link {
-  padding-left: 20px;
-}
 .tappification .inverse {
   color: black;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 400px) {
+  .tappification .container {
+    padding-left: 0px;
+  }
+  .tappification .tappification-message,
   .tappification .tappification-link {
-    padding: 7px 0 0 40px;
+    padding-left: 15px;
+  }
+  .tappification .tappification-icon {
+    display: none !important;
   }
 }
 .tappification-info {

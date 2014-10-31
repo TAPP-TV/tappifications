@@ -61,8 +61,7 @@
             '            <a class="primary"></a>',
             '        </div>',
             '        <button type="button" class="tappification-close" data-dismiss="alert">',
-            '            <span aria-hidden="true"><i class="fa fa-times-circle-o"></i>',
-            '            </span>',
+            '            <span aria-hidden="true"><i class="fa fa-times-circle-o"></i><span>',
             '        </button>',
             '    </div>',
             '</div>'
@@ -72,9 +71,12 @@
         $template.addClass('tappification-' + type);
         $template.find('.tappification-icon i').addClass(determineIcon());
         $template.find('.tappification-message').text(message);
-        $template.find('.tappification-link a').text(callToActionText);
-        $template.find('.tappification-link a').attr('href', callToActionUrl);
         $template.attr('data-position', position);
+        
+        if (callToActionUrl) {
+	        $template.find('.tappification-link a').text(callToActionText);
+	        $template.find('.tappification-link a').attr('href', callToActionUrl);
+        }
 
         // Remove recent notification so new one can appear
         $tappification.remove();

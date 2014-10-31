@@ -1,11 +1,17 @@
 @import "_variables.less";
 
+* {
+	box-sizing: border-box;
+}
+
 // Tappifications
 .tappification {
 
+	line-height: 1.42857143;
 	position: fixed;
 	min-height: 40px;
-	
+	z-index: 9007199254740992; // beat that
+
 	// Position of Notifications
 	&[data-position="bottom"] {
 		right: 0;
@@ -18,6 +24,8 @@
 		background: none;
 		border: none;
 		outline: none;
+		margin: 0;
+		padding: 0;
 	}
 
 	// start defining styles
@@ -30,7 +38,7 @@
 		border-left: 1px solid black;
 		border-right: 1px solid black;
 		position: relative;
-		padding: 10px 20px 15px 20px;
+		padding: 0 20px 15px 20px;
 		font-size: 14px;
 		font-weight: 100;
 
@@ -47,35 +55,18 @@
 
 	.tappification-message {
 		padding-left: 40px;
+		padding-top: 10px;
 	}
 
 
 	.tappification-link {
+		padding-left: 40px;
+		padding-top: 10px;
 		a {
+			display: block;
 			color: white;
 			text-decoration: underline;
-			&:hover {
-				opacity: @hover-dim;
-			}
-		}
-	}
-
-	.tappification-link, 
-	.tappification-message,
-	.tappification-close {
-
-		.transition(opacity 0.2s ease-in);
-
-		a {
-			.transition(opacity 0.2s ease-in);
-		}
-	}
-
-	.tappification-link {
-
-		.primary {
 			.transition(opacity 0.3s ease-in);
-
 			&:hover {
 				opacity: @hover-dim;
 			}
@@ -85,26 +76,30 @@
 	.tappification-close {
 		position: absolute;
 		right: 15px;
-		top: 0;
+		top: 5px;
 		font-size: 20px;
+		.transition(opacity 0.2s ease-in);
+
 		&:hover {
 			opacity: @hover-dim;
 		}
 	}
 
-	.tappification-link {
-		padding-left: 20px;
-	}
-
 	.inverse {
 		color: black;
 	}
-
-	@media screen and (max-width: @viewport-bootstrap-portrain-min) {
+	
+	// remove the icon on the left and tighten up padding on small mobile
+	@media screen and (max-width: @viewport-portrain-tiny) {
+		.container {
+			padding-left: 0px;
+		}
+		.tappification-message,
 		.tappification-link {
-			padding: 7px 0 0 40px;
+			padding-left: 15px;
 		}
 		.tappification-icon {
+			display: none !important;
 		}
 	}
 }
