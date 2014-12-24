@@ -33,6 +33,9 @@
         padding-left: 20px;
         color: #333;
     }
+    .extra-space {
+        height: 100px;
+    }
     </style>
 </head>
 
@@ -40,6 +43,7 @@
 
     <section>
         <h1>Tappifications</h1>
+        <p>Click on a button below</p>
         <button class="tappification-info">Info</button>
         <button class="tappification-warning">Warning</button>
         <button class="tappification-danger">Danger</button>
@@ -76,10 +80,9 @@ css/tappifications.css</code>
 js/tappifications.js</code>
         </pre>
     </section>
-
+    <div class="extra-space"></div>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="js/tappifications.js"></script>
-
     <script>
     $('.tappification-info').click(function() {
         $.tappification({
@@ -102,7 +105,6 @@ js/tappifications.js</code>
             callToActionText: 'Sign Up Now!',
             callToActionUrl: '#'
         });
-
     });
     $('.tappification-info').click();
     </script>
