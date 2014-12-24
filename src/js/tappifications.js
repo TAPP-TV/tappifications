@@ -1,7 +1,6 @@
 /* global jquery, $ */
 
-;
-(function($) {
+;(function($) {
 
     'use strict';
 
@@ -33,8 +32,6 @@
             velocityClose = finalOptions.velocityClose,
             position = finalOptions.position,
             iconType;
-
-        console.log(finalOptions);
 
         // pick a font-awesome icon based on the notification type
         function determineIcon() {
