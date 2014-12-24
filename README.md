@@ -1,9 +1,5 @@
 # Tappifications
 
-> Because we need another jquery notifications library...
-
-## About 
-
 Tappifications is a toaster notification library that can be used to easily promote content or notify users on your site.
 
 ## Getting Started
