@@ -1,0 +1,32 @@
+/**
+ * tappifications
+ * @version v0.1.4
+ * @link https://github.com/TAPP-TV/tappifications/
+ * @license MIT
+ */
+*{box-sizing:border-box}
+.tappification{line-height:1.42857143;position:fixed;min-height:40px;z-index:9007199254740992;background:#fff}
+.tappification[data-position=bottom]{right:0;left:0;bottom:-50px}
+.tappification button{background:0 0;border:none;outline:0;margin:0;padding:0}
+.tappification .container{max-width:933px;margin-left:auto;margin-right:auto;border-left:1px solid #000;border-right:1px solid #000;position:relative;padding:0 20px 15px;font-size:14px;font-weight:100}
+.tappification .container div{display:inline-block}
+.tappification .tappification-icon{font-size:27px;position:absolute;top:3px}
+.tappification .tappification-link,.tappification .tappification-message{padding-left:40px;padding-top:10px}
+.tappification .tappification-link a{display:block;color:#fff;text-decoration:underline;-o-transition:opacity,.3s,ease-in;-moz-transition:opacity,.3s,ease-in;-webkit-transition:opacity,.3s,ease-in;transition:opacity,.3s,ease-in}
+.tappification .tappification-link a:hover{opacity:.6}
+.tappification .tappification-close{position:absolute;right:15px;top:5px;font-size:20px;-o-transition:opacity,.2s,ease-in;-moz-transition:opacity,.2s,ease-in;-webkit-transition:opacity,.2s,ease-in;transition:opacity,.2s,ease-in}
+.tappification .tappification-close:hover{opacity:.6}
+.tappification .inverse{color:#000}
+@media screen and (max-width:400px){.tappification .container{padding-left:0}
+.tappification .tappification-link,.tappification .tappification-message{padding-left:15px}
+.tappification .tappification-icon{display:none!important}}
+.tappification-info{background-color:#167afb;color:#fff}
+.tappification-info .tappification-link .primary{text-decoration:none;text-transform:uppercase;background:#0b3e85;border:1px solid #093169;padding:5px 15px;font-size:12px;font-weight:500;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px}
+.tappification-info .tappification-icon{color:#7fbcfc}
+.tappification-info .tappification-link{color:#e6e6e6}
+.tappification-warning{background-color:#fdc12d;color:#000}
+.tappification-warning .tappification-icon,.tappification-warning .tappification-link,.tappification-warning .tappification-link .primary{color:#000}
+.tappification-danger{background-color:#fc351d;color:#fff}
+.tappification-danger .tappification-icon{color:#fff}
+.tappification-danger .tappification-link{color:#e6e6e6}
+.tappification-btn-c2a{text-decoration:none;text-transform:uppercase;background:#0b3e85;border:1px solid #093169;padding:5px 15px;font-size:12px;font-weight:500}
