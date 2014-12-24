@@ -35,9 +35,9 @@ Import the css and js and you're good to go!
 
 ```html
 
-<link rel="stylesheet" type="text/css" href="dist/tappification.min.css">
+<link rel="stylesheet" type="text/css" href="dist/tappifications.css">
 
-<script type="text/javascript" src="dist/tappification.min.js">
+<script type="text/javascript" src="dist/tappifications.js">
 ```
 
 ## Look and Feel
