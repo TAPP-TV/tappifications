@@ -14,7 +14,7 @@ gulp
 
 ## Usage
 
-```
+```javascript
 $.tappification({
     type: 'info',
     message: 'Your message goes here!',
@@ -33,12 +33,11 @@ $.tappification({
 
 Import the css and js and you're good to go!
 
-```
-html
+```html
 
- <link rel="stylesheet" type="text/css" href="dist/tappification.min.css">
+<link rel="stylesheet" type="text/css" href="dist/tappification.min.css">
 
- <script type="text/javascript" src="dist/tappification.min.js">
+<script type="text/javascript" src="dist/tappification.min.js">
 ```
 
 ## Look and Feel
