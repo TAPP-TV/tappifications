@@ -1,9 +1,5 @@
 # Tappifications
 
-> Because we need another jquery notifications library...
-
-## About 
-
 Tappifications is a toaster notification library that can be used to easily promote content or notify users on your site.
 
 ## Getting Started
@@ -18,14 +14,46 @@ gulp
 
 ## Usage
 
-```
+Three types of notifications are available
+
+### info
+
+```javascript
 $.tappification({
     type: 'info',
-    message: 'Your message goes here!',
+    message: 'Your info message goes here!',
     callToActionText: 'Click on me',
     callToActionUrl: 'http://www.tapptv.com/'
 });
 ```
+
+![info](media/info.jpg)
+
+### warning
+
+```javascript
+$.tappification({
+    type: 'warning',
+    message: 'Your warning message goes here!',
+    callToActionText: 'watch out!',
+    callToActionUrl: 'http://www.tapptv.com/'
+});
+```
+
+![warning](media/warning.jpg)
+
+### danger
+
+```javascript
+$.tappification({
+    type: 'warning',
+    message: 'Your danger message goes here!',
+    callToActionText: 'something went wrong',
+    callToActionUrl: 'http://www.tapptv.com/'
+});
+```
+
+![danger](media/danger.jpg)
 
 ## Dependencies
 
@@ -37,33 +65,15 @@ $.tappification({
 
 Import the css and js and you're good to go!
 
+```html
+
+<link rel="stylesheet" type="text/css" href="dist/tappifications.css">
+
+<script type="text/javascript" src="dist/tappifications.js">
 ```
-html
-
- <link rel="stylesheet" type="text/css" href="dist/tappification.min.css">
-
- <script type="text/javascript" src="dist/tappification.min.js">
-```
-
-## Look and Feel
-
-Currently three flavors of notifications are available
-
-### info
-
-![info](media/info.jpg)
-
-### warning
-
-![warning](media/warning.jpg)
-
-### danger
-
-![danger](media/danger.jpg)
 
 ## License
 
 The MIT License (MIT)
 
 Copyright (c) 2014 tapptv.com
-
